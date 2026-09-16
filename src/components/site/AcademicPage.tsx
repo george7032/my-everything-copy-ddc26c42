@@ -15,6 +15,8 @@ export type AcademicStage = {
 export type AcademicPageConfig = {
   name: string;
   image: string;
+  /** Three photos shown in the gallery section. */
+  gallery?: { src: string; alt: string }[];
   intro: string;
   description: string[];
   /** Optional "At a glance" values — omitted values are simply not shown. */
@@ -239,6 +241,28 @@ export default function AcademicPage({ config }: { config: AcademicPageConfig })
           </aside>
         </div>
       </Section>
+
+      {config.gallery && config.gallery.length > 0 && (
+        <Section muted>
+          <SectionHeading
+            title={`Life at ${config.name}`}
+            description="A glimpse of learning in action at the Academy."
+          />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {config.gallery.map((img) => (
+              <img
+                key={img.src}
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                width={1024}
+                height={768}
+                className="h-56 w-full rounded-xl border border-border object-cover"
+              />
+            ))}
+          </div>
+        </Section>
+      )}
 
       <Section muted>
         <SectionHeading
