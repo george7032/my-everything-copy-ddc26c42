@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Mail, MapPin, MessageCircle, Music2, Phone, Youtube } from "lucide-react";
+import { Clock, Facebook, Mail, MapPin, MessageCircle, Music2, Phone, Youtube } from "lucide-react";
 
 import logoImage from "@/assets/logo.png";
 import { academicLevels, school, socialLinks, whatsappLink } from "@/lib/school";
