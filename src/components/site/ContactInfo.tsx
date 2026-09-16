@@ -50,6 +50,22 @@ export default function ContactInfo({ tone = "dark" }: { tone?: "dark" | "light"
           </a>
         </div>
       </li>
+      <li className="flex gap-3">
+        <Clock aria-hidden="true" className={`mt-0.5 h-5 w-5 shrink-0 ${icon}`} />
+        <div>
+          <p className={`text-xs font-semibold uppercase tracking-wide ${label}`}>Operating Hours</p>
+          <ul className={`mt-1 space-y-0.5 text-sm ${value}`}>
+            {school.hours.map((h) => (
+              <li key={h.days} className="flex flex-wrap justify-between gap-x-3">
+                <span>{h.days}</span>
+                <span className={label === "text-muted-foreground" ? "text-muted-foreground" : "text-white/80"}>
+                  {h.time}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </li>
     </ul>
   );
 }
