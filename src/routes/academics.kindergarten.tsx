@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import AcademicPage, { type AcademicPageConfig } from "@/components/site/AcademicPage";
 import { SITE_URL } from "@/lib/school";
 import image from "@/assets/kindergarten.jpeg";
+import gallery1 from "@/assets/kg-1.jpg";
+import gallery2 from "@/assets/kg-2.jpg";
+import gallery3 from "@/assets/kg-3.jpg";
 
 const title = "Kindergarten (PP1 & PP2) in Utawala — Embakasi Benedicta Academy";
 const description =
@@ -26,6 +29,11 @@ export const Route = createFileRoute("/academics/kindergarten")({
 const config: AcademicPageConfig = {
   name: "Kindergarten",
   image,
+  gallery: [
+    { src: gallery1, alt: "Kindergarten learners building with colourful blocks in class" },
+    { src: gallery2, alt: "Kindergarten children enjoying outdoor play with their teacher" },
+    { src: gallery3, alt: "Teacher reading a story to a circle of kindergarten learners" },
+  ],
   intro:
     "PP1 and PP2 — a gentle, joyful first experience of school where young children feel safe, seen and excited to learn.",
   grades: "PP1 and PP2",

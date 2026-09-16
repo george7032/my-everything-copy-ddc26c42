@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import AcademicPage, { type AcademicPageConfig } from "@/components/site/AcademicPage";
 import { SITE_URL } from "@/lib/school";
 import image from "@/assets/upper.jpeg";
+import gallery1 from "@/assets/primary-1.jpg";
+import gallery2 from "@/assets/primary-2.jpg";
+import gallery3 from "@/assets/primary-3.jpg";
 
 const title = "Primary School (Grades 1–6) in Utawala — Embakasi Benedicta Academy";
 const description =
@@ -26,6 +29,11 @@ export const Route = createFileRoute("/academics/primary")({
 const config: AcademicPageConfig = {
   name: "Primary School",
   image,
+  gallery: [
+    { src: gallery1, alt: "Primary School pupils eagerly raising hands in class" },
+    { src: gallery2, alt: "Primary School pupils reading together in the school library" },
+    { src: gallery3, alt: "Primary School pupils doing a group science activity" },
+  ],
   intro:
     "Lower Primary (Grades 1–3) and Upper Primary (Grades 4–6) — strong foundations, practical learning and character development.",
   grades: "Grades 1 to 6",

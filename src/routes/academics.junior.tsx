@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import AcademicPage, { type AcademicPageConfig } from "@/components/site/AcademicPage";
 import { SITE_URL } from "@/lib/school";
 import image from "@/assets/jss.jpeg";
+import gallery1 from "@/assets/junior-1.jpg";
+import gallery2 from "@/assets/junior-2.jpg";
+import gallery3 from "@/assets/junior-3.jpg";
 
 const title = "Junior School (Grades 7–9) in Utawala — Embakasi Benedicta Academy";
 const description =
@@ -26,6 +29,11 @@ export const Route = createFileRoute("/academics/junior")({
 const config: AcademicPageConfig = {
   name: "Junior School",
   image,
+  gallery: [
+    { src: gallery1, alt: "Junior School learners working on laptops in the computer lab" },
+    { src: gallery2, alt: "Junior School students carrying out a chemistry experiment" },
+    { src: gallery3, alt: "Junior School learners collaborating on a group project" },
+  ],
   intro:
     "Grades 7 to 9 — learners grow into independent thinkers through science, technology, projects and leadership.",
   grades: "Grades 7 to 9",

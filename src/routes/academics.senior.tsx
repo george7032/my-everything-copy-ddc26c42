@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import AcademicPage, { type AcademicPageConfig } from "@/components/site/AcademicPage";
 import { SITE_URL } from "@/lib/school";
 import image from "@/assets/hero-6.jpeg";
+import gallery1 from "@/assets/senior-1.jpg";
+import gallery2 from "@/assets/senior-2.jpg";
+import gallery3 from "@/assets/senior-3.jpg";
 
 const title = "Senior School (Grades 10–12) — STEM & Social Sciences | Embakasi Benedicta Academy";
 const description =
@@ -26,6 +29,11 @@ export const Route = createFileRoute("/academics/senior")({
 const config: AcademicPageConfig = {
   name: "Senior School",
   image,
+  gallery: [
+    { src: gallery1, alt: "Senior School students solving mathematics on a whiteboard" },
+    { src: gallery2, alt: "Senior School students conducting a physics experiment" },
+    { src: gallery3, alt: "Senior School students revising in the study hall" },
+  ],
   intro:
     "Grades 10 to 12 — learners begin specialising according to their interests, abilities and future aspirations.",
   grades: "Grades 10 to 12",
