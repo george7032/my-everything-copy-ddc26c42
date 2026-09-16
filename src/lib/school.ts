@@ -16,6 +16,12 @@ export const school = {
   phoneHref: "tel:+254110380560",
   whatsapp: "254110380560",
   email: "marketingebenedictaacademy@gmail.com",
+  /** Operating hours as supplied by the Academy. */
+  hours: [
+    { days: "Monday – Friday", time: "8:00 am – 5:00 pm" },
+    { days: "Saturday", time: "8:00 am – 2:00 pm" },
+    { days: "Sunday", time: "Closed" },
+  ],
 } as const;
 
 export const whatsappMessage =
