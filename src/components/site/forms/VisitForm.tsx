@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { SelectField, TextAreaField, TextField } from "./Field";
+import { openMailTo } from "./mailto";
 
 const levels = ["Kindergarten", "Primary School", "Junior School", "Senior School"] as const;
 
@@ -46,7 +47,20 @@ export default function VisitForm() {
     ev.preventDefault();
     const e = validate();
     setErrors(e);
-    if (Object.keys(e).length === 0) setSubmitted(true);
+    if (Object.keys(e).length === 0) {
+      openMailTo(`School Visit Request — ${values.learner}`, [
+        ["Parent/Guardian", values.parent],
+        ["Telephone", values.phone],
+        ["Email", values.email],
+        ["Learner", values.learner],
+        ["Level interested in", values.level],
+        ["Preferred visit date", values.date],
+        ["Preferred visit time", values.time],
+        ["Number of visitors", values.visitors],
+        ["Message", values.message],
+      ]);
+      setSubmitted(true);
+    }
   }
 
   if (submitted) {

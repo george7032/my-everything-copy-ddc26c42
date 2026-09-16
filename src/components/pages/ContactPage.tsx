@@ -7,6 +7,7 @@ import { CtaGroup } from "@/components/site/CtaGroup";
 import ContactInfo from "@/components/site/ContactInfo";
 import VisitForm from "@/components/site/forms/VisitForm";
 import { TextAreaField, TextField } from "@/components/site/forms/Field";
+import { openMailTo } from "@/components/site/forms/mailto";
 import { school } from "@/lib/school";
 import heroImage from "@/assets/hero-7.jpeg";
 
@@ -28,7 +29,15 @@ function ContactForm() {
     if (values.subject.trim().length < 3) err.subject = "Please enter a subject.";
     if (values.message.trim().length < 10) err.message = "Please enter your message.";
     setErrors(err);
-    if (Object.keys(err).length === 0) setSent(true);
+    if (Object.keys(err).length === 0) {
+      openMailTo(values.subject, [
+        ["Name", values.name],
+        ["Telephone", values.phone],
+        ["Email", values.email],
+        ["Message", values.message],
+      ]);
+      setSent(true);
+    }
   }
 
   if (sent) {
