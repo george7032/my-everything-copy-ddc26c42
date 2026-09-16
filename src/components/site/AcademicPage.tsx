@@ -243,7 +243,7 @@ export default function AcademicPage({ config }: { config: AcademicPageConfig })
       </Section>
 
       {config.gallery && config.gallery.length > 0 && (
-        <Section muted>
+        <Section>
           <SectionHeading
             title={`Life at ${config.name}`}
             description="A glimpse of learning in action at the Academy."
