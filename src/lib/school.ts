@@ -11,6 +11,8 @@ export const school = {
   tagline: "A nurturing space for young minds",
   /** Verified location as supplied by the Academy. */
   address: "Utawala, next to Kimson Plaza, Nairobi, Kenya",
+  /** Postal address as supplied by the Academy. */
+  poBox: "P.O. Box 47717 – 00100, Nairobi, Kenya",
   /** Existing published contact details carried over from the Academy's own site. */
   phone: "+254 110 380 560",
   phoneHref: "tel:+254110380560",

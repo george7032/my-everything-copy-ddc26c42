@@ -111,7 +111,11 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-white/85">
               <li className="flex gap-2">
                 <MapPin aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0" />
-                <span>{school.address}</span>
+                <span>
+                  {school.poBox}
+                  <br />
+                  {school.address}
+                </span>
               </li>
               <li className="flex gap-2">
                 <Phone aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0" />

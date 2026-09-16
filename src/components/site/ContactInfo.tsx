@@ -12,6 +12,7 @@ export default function ContactInfo({ tone = "dark" }: { tone?: "dark" | "light"
         <MapPin aria-hidden="true" className={`mt-0.5 h-5 w-5 shrink-0 ${icon}`} />
         <div>
           <p className={`text-xs font-semibold uppercase tracking-wide ${label}`}>Address</p>
+          <p className={`text-sm ${value}`}>{school.poBox}</p>
           <p className={`text-sm ${value}`}>{school.address}</p>
         </div>
       </li>
