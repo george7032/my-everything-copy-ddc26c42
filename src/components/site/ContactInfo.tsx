@@ -1,4 +1,4 @@
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { school, whatsappLink } from "@/lib/school";
 
 export default function ContactInfo({ tone = "dark" }: { tone?: "dark" | "light" }) {

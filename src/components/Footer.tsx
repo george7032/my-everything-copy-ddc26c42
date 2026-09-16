@@ -131,6 +131,14 @@ export default function Footer() {
                   {school.email}
                 </a>
               </li>
+              <li className="flex gap-2">
+                <Clock aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0" />
+                <span>
+                  Mon – Fri: 8:00 am – 5:00 pm
+                  <br />
+                  Sat: 8:00 am – 2:00 pm · Sun: Closed
+                </span>
+              </li>
             </ul>
           </div>
         </div>
