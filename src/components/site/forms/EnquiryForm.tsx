@@ -46,7 +46,19 @@ export default function EnquiryForm() {
     ev.preventDefault();
     const e = validate();
     setErrors(e);
-    if (Object.keys(e).length === 0) setSubmitted(true);
+    if (Object.keys(e).length === 0) {
+      openMailTo(`Admission Enquiry — ${values.learner}`, [
+        ["Parent/Guardian", values.parent],
+        ["Telephone", values.phone],
+        ["Email", values.email],
+        ["Learner", values.learner],
+        ["Current school level", values.currentLevel],
+        ["Level interested in", values.interestLevel],
+        ["Day or boarding", values.attendance],
+        ["Message", values.message],
+      ]);
+      setSubmitted(true);
+    }
   }
 
   if (submitted) {
