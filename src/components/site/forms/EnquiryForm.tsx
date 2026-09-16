@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { SelectField, TextAreaField, TextField } from "./Field";
+import { openMailTo } from "./mailto";
 
 const levels = ["Kindergarten", "Primary School", "Junior School", "Senior School"] as const;
 const attendance = ["Day", "Boarding"] as const;
